@@ -35,7 +35,6 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
 │   │   └── tasks.entity.ts
 │   ├── app.module.ts
 │   └── main.ts
-├── ormconfig.json
 ├── package.json
 └── README.md
 ```
