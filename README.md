@@ -1,3 +1,5 @@
+Aqui está o README atualizado com a configuração do `.env`:
+
 ---
 
 # 📝 API de Lista de Tarefas
@@ -35,6 +37,7 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
 │   │   └── tasks.entity.ts
 │   ├── app.module.ts
 │   └── main.ts
+├── .env
 ├── package.json
 └── README.md
 ```
@@ -64,23 +67,36 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
    npm install
    ```
 
-3. **Configure o banco de dados:**  
-   Edite o arquivo `ormconfig.json` com suas credenciais de banco de dados MySQL:
+3. **Configure o arquivo `.env`:**  
+   Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+
+   ```plaintext
+   DATABASE_HOST=localhost
+   DATABASE_PORT=3306
+   DATABASE_USER=seu_usuario
+   DATABASE_PASS=sua_senha
+   DATABASE_NAME=nome_do_banco
+
+   PORT=3000
+   ```
+
+4. **Edite o arquivo `ormconfig.json`:**  
+   Configure o arquivo para utilizar o `.env`:
 
    ```json
    {
      "type": "mysql",
-     "host": "localhost",
-     "port": 3306,
-     "username": "seu_usuario",
-     "password": "sua_senha",
-     "database": "nome_do_banco",
+     "host": process.env.DATABASE_HOST,
+     "port": parseInt(process.env.DATABASE_PORT),
+     "username": process.env.DATABASE_USER,
+     "password": process.env.DATABASE_PASS,
+     "database": process.env.DATABASE_NAME,
      "entities": ["dist/**/*.entity{.ts,.js}"],
      "synchronize": true
    }
    ```
 
-   > **Nota:** A opção `"synchronize": true` cria as tabelas automaticamente no banco de dados. Use com cuidado em produção.
+   > **Nota:** A opção `"synchronize": true` cria as tabelas automaticamente. Use com cautela em produção.
 
 ---
 
@@ -118,3 +134,5 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
 Se tiver sugestões ou dúvidas, envie um e-mail para **hemanoel718@gmail.com**.
 
 ---
+
+Se precisar de mais alguma alteração, é só avisar! 😊
