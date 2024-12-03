@@ -77,25 +77,6 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
 
    PORT=3000
    ```
-
-4. **Edite o arquivo `ormconfig.json`:**  
-   Configure o arquivo para utilizar o `.env`:
-
-   ```json
-   {
-     "type": "mysql",
-     "host": process.env.DATABASE_HOST,
-     "port": parseInt(process.env.DATABASE_PORT),
-     "username": process.env.DATABASE_USER,
-     "password": process.env.DATABASE_PASS,
-     "database": process.env.DATABASE_NAME,
-     "entities": ["dist/**/*.entity{.ts,.js}"],
-     "synchronize": true
-   }
-   ```
-
-   > **Nota:** A opção `"synchronize": true` cria as tabelas automaticamente. Use com cautela em produção.
-
 ---
 
 ## ▶️ Como Executar
