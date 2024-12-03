@@ -1,5 +1,3 @@
-Aqui está o README atualizado com a configuração do `.env`:
-
 ---
 
 # 📝 API de Lista de Tarefas
@@ -134,5 +132,3 @@ Este projeto é uma API simples desenvolvida em **NestJS** para gerenciar tarefa
 Se tiver sugestões ou dúvidas, envie um e-mail para **hemanoel718@gmail.com**.
 
 ---
-
-Se precisar de mais alguma alteração, é só avisar! 😊
